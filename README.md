@@ -1,4 +1,4 @@
-# Reserve Bank of Malawi Exchange Rate API — rbm-exchange-rate
+# Reserve Bank of Malawi Exchange Rates API — rbm-exchange-rate
 
 [![npm version](https://img.shields.io/npm/v/rbm-exchange-rate.svg)](https://www.npmjs.com/package/rbm-exchange-rate)
 [![license](https://img.shields.io/npm/l/rbm-exchange-rate.svg)](https://github.com/AllRates-Today/rbm-exchange-rate/blob/main/LICENSE)
@@ -18,6 +18,21 @@
 
 > **Official rate, not mid-market:** every value here is a number Reserve Bank of Malawi itself published, fixed once printed and carrying the central bank's own `rate_date` — what filings and audits require. Need the live interbank midpoint for pricing or display instead? Use the [mid-market API](https://allratestoday.com/docs/) or [`@allratestoday/sdk`](https://www.npmjs.com/package/@allratestoday/sdk). The two can diverge by several percent.
 
+## ⚡ Try it without a key
+
+The latest Reserve Bank of Malawi table is also served keyless, CORS-open and edge-cached, for evaluation, embeds and AI agents:
+
+```bash
+curl "https://allratestoday.com/api/open/central-bank/rbm?source=USD&target=MWK"
+```
+
+```js
+const r = await fetch('https://allratestoday.com/api/open/central-bank/rbm').then((x) => x.json());
+console.log(r.rate_date, r.rates.length); // the central bank's latest published table, no key
+```
+
+The open endpoint serves the *latest* table only and asks for a visible attribution link. The client below uses the keyed API, which adds point-in-time tables, history, and CSV/XML/Excel output.
+
 ## 🔑 Get your API key
 
 Get a free API key at [allratestoday.com/register](https://allratestoday.com/register) — no credit card required. Latest rates are on every plan, including free.
@@ -36,7 +51,7 @@ yarn add rbm-exchange-rate
 pnpm add rbm-exchange-rate
 ```
 
-Also published under the org scope as [`@allratestoday/rbm-exchange-rate`](https://www.npmjs.com/package/@allratestoday/rbm-exchange-rate) — same code, same versions.
+Requires Node 18+ (global `fetch`); also runs on Bun, Deno and edge runtimes. Also published under the org scope as [`@allratestoday/rbm-exchange-rate`](https://www.npmjs.com/package/@allratestoday/rbm-exchange-rate) — same code, same versions.
 
 ## 🏁 Quick start
 
@@ -77,7 +92,7 @@ const pair = await getRate('USD', 'MWK', { apiKey: 'art_live_...' });
   rate_type: 'middle',
   derived: false,
   method: 'published',
-  disclaimer: '…'
+  disclaimer: 'Official rates as published by the named central bank. On weekends/holidays the most recent published rate_date is returned.'
 }
 ```
 
@@ -176,6 +191,39 @@ Reserve Bank of Malawi currently publishes rates covering **37 currencies** agai
 
 🇦🇪 `AED` · 🇦🇷 `ARS` · 🇦🇺 `AUD` · 🇧🇼 `BWP` · 🇨🇦 `CAD` · 🇨🇭 `CHF` · 🇨🇲 `CMD` · 🇨🇳 `CNY` · 🇩🇰 `DKK` · 🇪🇹 `ETB` · 🇪🇺 `EUR` · 🇬🇧 `GBP` · 🇭🇰 `HKD` · 🇮🇩 `IDR` · 🇮🇪 `IEP` · 🇮🇳 `INR` · 🇯🇵 `JPY` · 🇰🇪 `KES` · 🇰🇷 `KRW` · 🇰🇼 `KWD` · 🇱🇰 `LKR` · 🇲🇬 `MGA` · 🇲🇾 `MYR` · 🇲🇿 `MZN` · 🇳🇴 `NOK` · 🇳🇿 `NZD` · 🇵🇭 `PHP` · 🇵🇰 `PKR` · 🇸🇦 `SAR` · 🇸🇪 `SEK` · 🇸🇬 `SGD` · 🇹🇭 `THB` · 🇹🇷 `TRY` · 🇹🇿 `TZS` · 🇺🇸 `USD` · `XDR` · 🇿🇦 `ZAR`
 
+## 🏛️ Source
+
+The Reserve Bank of Malawi publishes daily buying, middle and selling rates for the kwacha against around 38 currencies. Through the kwacha's managed float — including the sharp official devaluations of recent years — the RBM table is the official series Malawian banks, importers and the revenue authority must cite.
+
+- Publisher's own page: [Major rates](https://www.rbm.mw/Statistics/MajorRates/) · [www.rbm.mw](https://www.rbm.mw)
+- Publication: every business day; the exact schedule, freshness status and any current delay are on the [Reserve Bank of Malawi rates page](https://allratestoday.com/central-bank-rates-api/rbm/)
+- Values are stored unmodified, with the publisher's own `rate_date` on every row — see the [methodology](https://allratestoday.com/official-rates-methodology/)
+
+## 🧭 Reading the numbers
+
+- `value` is always **quote currency per 1 unit of base currency** (`base: "EUR", quote: "USD", value: 1.15` means 1 EUR = 1.15 USD).
+- Reserve Bank of Malawi quotes **MWK per 1 unit of foreign currency** (e.g. `base: "USD", quote: "MWK"` means MWK per one US dollar).
+- Need the other way round? Ask `getRate(target, source)` and the API inverts or crosses for you, flagged `derived: true` — never divide a published rate yourself in a compliance workflow.
+- `rate_type` tells you which of the central bank's series a row belongs to (`middle` here); some publishers print buy/sell or several fixings for the same pair.
+
+## 🧩 ERP & accounting systems
+
+Loading the official Reserve Bank of Malawi rate into an accounting system is a supported workflow, not a hack. Step-by-step guides with the direction each system expects:
+
+- [Dynamics 365 Business Central](https://allratestoday.com/docs/integrations/business-central/) — built-in Currency Exchange Rate Service, no code
+- [Xero](https://allratestoday.com/docs/integrations/xero/) · [QuickBooks Online](https://allratestoday.com/docs/integrations/quickbooks/) · [SAP S/4HANA and ECC](https://allratestoday.com/docs/integrations/sap/) · [Odoo](https://allratestoday.com/docs/integrations/odoo/)
+
+The same keyed endpoints return `?format=csv`, `?format=xml` and `?format=xlsx`, and accept the key as `?api_key=` on the URL for importers that cannot send headers:
+
+```bash
+curl "https://allratestoday.com/api/v1/central-bank/rbm/latest?format=xml&api_key=art_live_..."
+```
+
+## 🤖 AI agents
+
+- MCP server: `npx -y @allratestoday/central-bank-mcp` (stdio) or the hosted endpoint `https://allratestoday.com/api/mcp` — tools for official rates, history, cross-bank comparison and publication calendars
+- Machine-readable site guide: [llms.txt](https://allratestoday.com/llms.txt) · [for-ai-agents](https://allratestoday.com/for-ai-agents/)
+
 ## ⚖️ Published vs derived rates
 
 If Reserve Bank of Malawi does not print a pair directly, the API resolves it from the central bank's own table and says so — official and computed values are never confused:
@@ -250,7 +298,8 @@ Need the whole archive rather than an API call? The same published tables are mi
 
 - [Reserve Bank of Malawi rates page](https://allratestoday.com/central-bank-rates-api/rbm/) — live table, publication cadence, FAQ
 - [All central bank sources](https://allratestoday.com/central-bank-rates-api/)
-- [API documentation](https://allratestoday.com/docs/#central-bank) · [Interactive reference](https://allratestoday.com/api-reference/)
+- [Package docs on the site](https://allratestoday.com/docs/sdk/rbm-exchange-rate/) · [ERP integration guides](https://allratestoday.com/docs/integrations/)
+- [API documentation](https://allratestoday.com/docs/#central-bank) · [Interactive reference](https://allratestoday.com/api-reference/) · [Methodology](https://allratestoday.com/official-rates-methodology/)
 - [Register (free)](https://allratestoday.com/register) · [Pricing](https://allratestoday.com/pricing/)
 - [GitHub](https://github.com/AllRates-Today/rbm-exchange-rate)
 
