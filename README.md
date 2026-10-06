@@ -85,7 +85,7 @@ const pair = await getRate('USD', 'MWK', { apiKey: 'art_live_...' });
 {
   bank: 'rbm',
   name: 'Reserve Bank of Malawi',
-  rate_date: '2026-09-25',   // Reserve Bank of Malawi's own publication date
+  rate_date: '2026-10-06',   // Reserve Bank of Malawi's own publication date
   source: 'USD',
   target: 'MWK',
   rate: 1734.0118,
@@ -113,7 +113,7 @@ console.log(table.rate_date, table.rates.length);
 {
   bank: 'rbm',
   name: 'Reserve Bank of Malawi',
-  rate_date: '2026-09-25',
+  rate_date: '2026-10-06',
   rates: [
     { "base": "USD", "quote": "MWK", "type": "middle", "value": 1734.0118 },
     { "base": "USD", "quote": "MWK", "type": "sell", "value": 1751 },
@@ -157,7 +157,7 @@ Paid plans. One resolved rate per publication date — ready for charting, reval
 import { getHistory } from 'rbm-exchange-rate';
 
 const series = await getHistory(
-  { source: 'USD', target: 'MWK', from: '2026-01-01', to: '2026-09-25' },
+  { source: 'USD', target: 'MWK', from: '2026-01-01', to: '2026-10-06' },
   { apiKey: 'art_live_...' }
 );
 ```
@@ -170,11 +170,11 @@ const series = await getHistory(
   source: 'USD',
   target: 'MWK',
   from: '2026-01-01',
-  to: '2026-09-25',
+  to: '2026-10-06',
   count: 152,
   rates: [
     // one entry per publication date
-    { date: '2026-09-25', rate: 1734.0118, rate_type: 'middle', derived: false, method: 'published' },
+    { date: '2026-10-06', rate: 1734.0118, rate_type: 'middle', derived: false, method: 'published' },
     // …
   ],
   disclaimer: '…'
