@@ -4,6 +4,8 @@
 [![license](https://img.shields.io/npm/l/rbm-exchange-rate.svg)](https://github.com/AllRates-Today/rbm-exchange-rate/blob/main/LICENSE)
 [![zero dependencies](https://img.shields.io/badge/dependencies-0-brightgreen.svg)](https://www.npmjs.com/package/rbm-exchange-rate)
 [![TypeScript](https://img.shields.io/badge/TypeScript-types%20included-3178C6.svg)](https://www.typescriptlang.org/)
+[![USD/MWK today](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fallratestoday.com%2Fapi%2Fopen%2Fcentral-bank%2Frbm%3Fsource%3DUSD%26target%3DMWK&query=%24.rate&label=USD%2FMWK%20published%20by%20Reserve%20Bank%20of%20Malawi&color=0A7E8C&cacheSeconds=3600)](https://allratestoday.com/central-bank-rates-api/rbm/)
+[![rate date](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fallratestoday.com%2Fapi%2Fopen%2Fcentral-bank%2Frbm%3Fsource%3DUSD%26target%3DMWK&query=%24.rate_date&label=rate%20date&color=555&cacheSeconds=3600)](https://allratestoday.com/central-bank-rates-api/rbm/)
 
 **Official Reserve Bank of Malawi (Malawi) daily exchange rates for Node.js and TypeScript. The published central bank rates behind tax filings, customs valuations, audits, and compliant invoicing — not market estimates, but the numbers Reserve Bank of Malawi itself prints, every business day.**
 
@@ -32,6 +34,79 @@ console.log(r.rate_date, r.rates.length); // the central bank's latest published
 ```
 
 The open endpoint serves the *latest* table only and asks for a visible attribution link. The client below uses the keyed API, which adds point-in-time tables, history, and CSV/XML/Excel output.
+
+## 📈 Latest published table
+
+Today's full Reserve Bank of Malawi table, straight from the central bank's latest publication. On GitHub it is refreshed by [a daily Action](.github/workflows/daily-table.yml) that reads the keyless endpoint above and commits only when the central bank publishes a new table; the copy on npm is as of the package's publish date.
+
+<!-- daily-table:start -->
+Published **2026-10-08** by Reserve Bank of Malawi — 114 rates, first 60 shown. Updated 2026-10-08.
+
+| Base | Quote | Type | Rate |
+| --- | --- | --- | ---: |
+| AED | MWK | buy | 467.5354 |
+| AED | MWK | middle | 472.1611 |
+| AED | MWK | sell | 476.7869 |
+| ARS | MWK | buy | 1.1319 |
+| ARS | MWK | middle | 1.1431 |
+| ARS | MWK | sell | 1.1543 |
+| AUD | MWK | buy | 1193.372 |
+| AUD | MWK | middle | 1205.1792 |
+| AUD | MWK | sell | 1216.9864 |
+| BWP | MWK | buy | 131.5243 |
+| BWP | MWK | middle | 132.8256 |
+| BWP | MWK | sell | 134.1269 |
+| CAD | MWK | buy | 1204.1683 |
+| CAD | MWK | middle | 1216.0823 |
+| CAD | MWK | sell | 1227.9963 |
+| CHF | MWK | buy | 2123.6003 |
+| CHF | MWK | middle | 2144.6112 |
+| CHF | MWK | sell | 2165.622 |
+| CMD | MWK | buy | 1717.0236 |
+| CMD | MWK | middle | 1734.0118 |
+| CMD | MWK | sell | 1751 |
+| CNY | MWK | buy | 256.2034 |
+| CNY | MWK | middle | 258.7382 |
+| CNY | MWK | sell | 261.2731 |
+| DKK | MWK | buy | 257.1858 |
+| DKK | MWK | middle | 259.7304 |
+| DKK | MWK | sell | 262.2749 |
+| ETB | MWK | buy | 10.6738 |
+| ETB | MWK | middle | 10.7794 |
+| ETB | MWK | sell | 10.885 |
+| EUR | MWK | buy | 1979.8742 |
+| EUR | MWK | middle | 1999.463 |
+| EUR | MWK | sell | 2019.0518 |
+| GBP | MWK | buy | 2333.4042 |
+| GBP | MWK | middle | 2356.4908 |
+| GBP | MWK | sell | 2379.5775 |
+| HKD | MWK | buy | 218.7932 |
+| HKD | MWK | middle | 220.958 |
+| HKD | MWK | sell | 223.1227 |
+| IDR | MWK | buy | 0.096 |
+| IDR | MWK | middle | 0.0969 |
+| IDR | MWK | sell | 0.0979 |
+| IEP | MWK | buy | 1207.5558 |
+| IEP | MWK | middle | 1219.5033 |
+| IEP | MWK | sell | 1231.4509 |
+| INR | MWK | buy | 17.7415 |
+| INR | MWK | middle | 17.917 |
+| INR | MWK | sell | 18.0926 |
+| JPY | MWK | buy | 10.8549 |
+| JPY | MWK | middle | 10.9623 |
+| JPY | MWK | sell | 11.0697 |
+| KES | MWK | buy | 13.2333 |
+| KES | MWK | middle | 13.3643 |
+| KES | MWK | sell | 13.4952 |
+| KRW | MWK | buy | 1.282 |
+| KRW | MWK | middle | 1.2946 |
+| KRW | MWK | sell | 1.3073 |
+| KWD | MWK | buy | 5572.9427 |
+| KWD | MWK | middle | 5628.0812 |
+| KWD | MWK | sell | 5683.2197 |
+
+[Full table on the Reserve Bank of Malawi rates page](https://allratestoday.com/central-bank-rates-api/rbm/) · Source: [Official rates published by RBM, served by AllRatesToday](https://allratestoday.com/central-bank-rates-api/rbm/). Rates are as printed by the central bank; AllRatesToday is not affiliated with it.
+<!-- daily-table:end -->
 
 ## 🔑 Get your API key
 
