@@ -33,79 +33,82 @@ const r = await fetch('https://allratestoday.com/api/open/central-bank/rbm').the
 console.log(r.rate_date, r.rates.length); // the central bank's latest published table, no key
 ```
 
-The open endpoint serves the *latest* table only and asks for a visible attribution link. The client below uses the keyed API, which adds point-in-time tables, history, and CSV/XML/Excel output.
+The open endpoint serves the *latest* table only (JSON by default; add `?format=csv`, `xml` or `xlsx` for a file) and asks for a visible attribution link. The client below uses the keyed API, which adds point-in-time tables and history.
 
 ## 📈 Latest published table
 
 [![Latest Reserve Bank of Malawi table](https://allratestoday.com/api/open/central-bank/rbm/table.svg)](https://allratestoday.com/central-bank-rates-api/rbm/)
 
-The image is rendered live from the keyless endpoint above, so it follows the central bank's publications on npm and on GitHub alike without a new release. The text copy below is there for search and copy-paste: on GitHub [a daily Action](.github/workflows/daily-table.yml) refreshes it whenever the central bank publishes a new table; on npm it is as of the package's publish date.
+The image is rendered live from the keyless endpoint above, so it follows the central bank's publications on npm and on GitHub alike without a new release. The same table as text is folded below for search and copy-paste: on GitHub [a daily Action](.github/workflows/daily-table.yml) refreshes it whenever the central bank publishes a new table; on npm it is as of the package's publish date.
 
 <!-- daily-table:start -->
-Published **2026-10-16** by Reserve Bank of Malawi — 114 rates, first 60 shown. Updated 2026-10-16.
+<details>
+<summary>Table as text: published 2026-10-19 by Reserve Bank of Malawi — 111 rates, first 60 shown. Updated 2026-10-19.</summary>
 
 | Base | Quote | Type | Rate |
 | --- | --- | --- | ---: |
 | AED | MWK | buy | 467.5226 |
 | AED | MWK | middle | 472.1483 |
 | AED | MWK | sell | 476.7739 |
-| ARS | MWK | buy | 1.1352 |
-| ARS | MWK | middle | 1.1465 |
-| ARS | MWK | sell | 1.1577 |
-| AUD | MWK | buy | 1192.2947 |
-| AUD | MWK | middle | 1204.0913 |
-| AUD | MWK | sell | 1215.8878 |
-| BWP | MWK | buy | 132.3822 |
-| BWP | MWK | middle | 133.692 |
-| BWP | MWK | sell | 135.0018 |
-| CAD | MWK | buy | 1211.0479 |
-| CAD | MWK | middle | 1223.0299 |
-| CAD | MWK | sell | 1235.012 |
-| CHF | MWK | buy | 2140.3054 |
-| CHF | MWK | middle | 2161.4815 |
-| CHF | MWK | sell | 2182.6576 |
+| ARS | MWK | buy | 1.1315 |
+| ARS | MWK | middle | 1.1427 |
+| ARS | MWK | sell | 1.1539 |
+| AUD | MWK | buy | 1197.7842 |
+| AUD | MWK | middle | 1209.635 |
+| AUD | MWK | sell | 1221.4859 |
+| BWP | MWK | buy | 122.7673 |
+| BWP | MWK | middle | 123.982 |
+| BWP | MWK | sell | 125.1966 |
+| CAD | MWK | buy | 1217.5746 |
+| CAD | MWK | middle | 1229.6212 |
+| CAD | MWK | sell | 1241.6678 |
+| CHF | MWK | buy | 2146.5401 |
+| CHF | MWK | middle | 2167.7778 |
+| CHF | MWK | sell | 2189.0156 |
 | CMD | MWK | buy | 1717.0236 |
 | CMD | MWK | middle | 1734.0118 |
 | CMD | MWK | sell | 1751 |
-| CNY | MWK | buy | 256.7128 |
-| CNY | MWK | middle | 259.2527 |
-| CNY | MWK | sell | 261.7926 |
-| DKK | MWK | buy | 258.0051 |
-| DKK | MWK | middle | 260.5577 |
-| DKK | MWK | sell | 263.1104 |
-| ETB | MWK | buy | 10.6383 |
-| ETB | MWK | middle | 10.7436 |
-| ETB | MWK | sell | 10.8488 |
-| EUR | MWK | buy | 1986.2409 |
-| EUR | MWK | middle | 2005.8927 |
-| EUR | MWK | sell | 2025.5445 |
-| GBP | MWK | buy | 2353.2118 |
-| GBP | MWK | middle | 2376.4944 |
-| GBP | MWK | sell | 2399.777 |
-| HKD | MWK | buy | 218.796 |
-| HKD | MWK | middle | 220.9608 |
-| HKD | MWK | sell | 223.1255 |
-| IDR | MWK | buy | 0.0953 |
-| IDR | MWK | middle | 0.0962 |
-| IDR | MWK | sell | 0.0971 |
-| IEP | MWK | buy | 1204.1683 |
-| IEP | MWK | middle | 1216.0823 |
-| IEP | MWK | sell | 1227.9963 |
-| INR | MWK | buy | 18.0716 |
-| INR | MWK | middle | 18.2504 |
-| INR | MWK | sell | 18.4292 |
-| JPY | MWK | buy | 10.8789 |
-| JPY | MWK | middle | 10.9866 |
-| JPY | MWK | sell | 11.0942 |
-| KES | MWK | buy | 13.2333 |
-| KES | MWK | middle | 13.3643 |
-| KES | MWK | sell | 13.4952 |
-| KRW | MWK | buy | 1.2856 |
-| KRW | MWK | middle | 1.2983 |
-| KRW | MWK | sell | 1.311 |
-| KWD | MWK | buy | 5572.9427 |
-| KWD | MWK | middle | 5628.0812 |
-| KWD | MWK | sell | 5683.2197 |
+| CNY | MWK | buy | 257.001 |
+| CNY | MWK | middle | 259.5438 |
+| CNY | MWK | sell | 262.0865 |
+| DKK | MWK | buy | 257.8268 |
+| DKK | MWK | middle | 260.3778 |
+| DKK | MWK | sell | 262.9287 |
+| ETB | MWK | buy | 10.6366 |
+| ETB | MWK | middle | 10.7419 |
+| ETB | MWK | sell | 10.8471 |
+| EUR | MWK | buy | 1984.6493 |
+| EUR | MWK | middle | 2004.2853 |
+| EUR | MWK | sell | 2023.9213 |
+| GBP | MWK | buy | 2356.572 |
+| GBP | MWK | middle | 2379.8879 |
+| GBP | MWK | sell | 2403.2037 |
+| HKD | MWK | buy | 218.7904 |
+| HKD | MWK | middle | 220.9551 |
+| HKD | MWK | sell | 223.1199 |
+| IDR | MWK | buy | 0.0951 |
+| IDR | MWK | middle | 0.0961 |
+| IDR | MWK | sell | 0.097 |
+| IEP | MWK | buy | 1204.9289 |
+| IEP | MWK | middle | 1216.8504 |
+| IEP | MWK | sell | 1228.7719 |
+| INR | MWK | buy | 18.1154 |
+| INR | MWK | middle | 18.2946 |
+| INR | MWK | sell | 18.4739 |
+| JPY | MWK | buy | 10.8672 |
+| JPY | MWK | middle | 10.9748 |
+| JPY | MWK | sell | 11.0823 |
+| KES | MWK | buy | 13.2486 |
+| KES | MWK | middle | 13.3797 |
+| KES | MWK | sell | 13.5108 |
+| KRW | MWK | buy | 1.2908 |
+| KRW | MWK | middle | 1.3036 |
+| KRW | MWK | sell | 1.3164 |
+| KWD | MWK | buy | 5575.6572 |
+| KWD | MWK | middle | 5630.8226 |
+| KWD | MWK | sell | 5685.9879 |
+
+</details>
 
 [Full table on the Reserve Bank of Malawi rates page](https://allratestoday.com/central-bank-rates-api/rbm/) · Source: [Official rates published by RBM, served by AllRatesToday](https://allratestoday.com/central-bank-rates-api/rbm/). Rates are as printed by the central bank; AllRatesToday is not affiliated with it.
 <!-- daily-table:end -->
@@ -380,7 +383,8 @@ Need the whole archive rather than an API call? The same published tables are mi
 - [All central bank sources](https://allratestoday.com/central-bank-rates-api/)
 - [Package docs on the site](https://allratestoday.com/docs/sdk/rbm-exchange-rate/) · [ERP integration guides](https://allratestoday.com/docs/integrations/)
 - [API documentation](https://allratestoday.com/docs/#central-bank) · [Interactive reference](https://allratestoday.com/api-reference/) · [Methodology](https://allratestoday.com/official-rates-methodology/)
-- [Register (free)](https://allratestoday.com/register) · [Pricing](https://allratestoday.com/pricing/)
+- [Register (Free)](https://allratestoday.com/register) · [Dashboard](https://allratestoday.com/profile) · [Pricing](https://allratestoday.com/pricing/)
+- [Status](https://allratestoday.com/status)
 - [GitHub](https://github.com/AllRates-Today/rbm-exchange-rate)
 
 ## 📜 License
