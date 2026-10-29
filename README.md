@@ -47,70 +47,70 @@ The image is rendered live from the keyless endpoint above, so it follows the ce
 
 <!-- daily-table:start -->
 <details>
-<summary>Table as text: published 2026-10-28 by Reserve Bank of Malawi — 114 rates, first 60 shown. Updated 2026-10-28.</summary>
+<summary>Table as text: published 2026-10-29 by Reserve Bank of Malawi — 114 rates, first 60 shown. Updated 2026-10-29.</summary>
 
 | Base | Quote | Type | Rate |
 | --- | --- | --- | ---: |
-| AED | MWK | buy | 467.5354 |
-| AED | MWK | middle | 472.1611 |
-| AED | MWK | sell | 476.7869 |
-| ARS | MWK | buy | 1.1162 |
-| ARS | MWK | middle | 1.1273 |
-| ARS | MWK | sell | 1.1383 |
-| AUD | MWK | buy | 1207.8956 |
-| AUD | MWK | middle | 1219.8465 |
-| AUD | MWK | sell | 1231.7974 |
-| BWP | MWK | buy | 131.1807 |
-| BWP | MWK | middle | 132.4786 |
-| BWP | MWK | sell | 133.7765 |
-| CAD | MWK | buy | 1221.2986 |
-| CAD | MWK | middle | 1233.382 |
-| CAD | MWK | sell | 1245.4655 |
-| CHF | MWK | buy | 2130.5076 |
-| CHF | MWK | middle | 2151.5868 |
-| CHF | MWK | sell | 2172.6659 |
+| AED | MWK | buy | 467.4845 |
+| AED | MWK | middle | 472.1097 |
+| AED | MWK | sell | 476.735 |
+| ARS | MWK | buy | 1.1139 |
+| ARS | MWK | middle | 1.1249 |
+| ARS | MWK | sell | 1.1359 |
+| AUD | MWK | buy | 1209.5123 |
+| AUD | MWK | middle | 1221.4792 |
+| AUD | MWK | sell | 1233.446 |
+| BWP | MWK | buy | 131.3523 |
+| BWP | MWK | middle | 132.6519 |
+| BWP | MWK | sell | 133.9515 |
+| CAD | MWK | buy | 1227.059 |
+| CAD | MWK | middle | 1239.1995 |
+| CAD | MWK | sell | 1251.3399 |
+| CHF | MWK | buy | 2135.3953 |
+| CHF | MWK | middle | 2156.5228 |
+| CHF | MWK | sell | 2177.6503 |
 | CMD | MWK | buy | 1717.0236 |
 | CMD | MWK | middle | 1734.0118 |
 | CMD | MWK | sell | 1751 |
-| CNY | MWK | buy | 257.5407 |
-| CNY | MWK | middle | 260.0888 |
-| CNY | MWK | sell | 262.6369 |
-| DKK | MWK | buy | 255.4791 |
-| DKK | MWK | middle | 258.0068 |
-| DKK | MWK | sell | 260.5345 |
-| ETB | MWK | buy | 10.615 |
-| ETB | MWK | middle | 10.72 |
-| ETB | MWK | sell | 10.825 |
-| EUR | MWK | buy | 1966.6102 |
-| EUR | MWK | middle | 1986.0678 |
-| EUR | MWK | sell | 2005.5253 |
-| GBP | MWK | buy | 2349.6747 |
-| GBP | MWK | middle | 2372.9223 |
-| GBP | MWK | sell | 2396.1699 |
-| HKD | MWK | buy | 218.8825 |
-| HKD | MWK | middle | 221.0481 |
-| HKD | MWK | sell | 223.2137 |
-| IDR | MWK | buy | 0.0945 |
-| IDR | MWK | middle | 0.0954 |
-| IDR | MWK | sell | 0.0964 |
-| IEP | MWK | buy | 1216.1085 |
-| IEP | MWK | middle | 1228.1407 |
-| IEP | MWK | sell | 1240.1728 |
-| INR | MWK | buy | 18.0303 |
-| INR | MWK | middle | 18.2087 |
-| INR | MWK | sell | 18.3871 |
-| JPY | MWK | buy | 10.8741 |
-| JPY | MWK | middle | 10.9817 |
-| JPY | MWK | sell | 11.0893 |
+| CNY | MWK | buy | 257.7494 |
+| CNY | MWK | middle | 260.2996 |
+| CNY | MWK | sell | 262.8498 |
+| DKK | MWK | buy | 255.9017 |
+| DKK | MWK | middle | 258.4336 |
+| DKK | MWK | sell | 260.9655 |
+| ETB | MWK | buy | 10.6602 |
+| ETB | MWK | middle | 10.7657 |
+| ETB | MWK | sell | 10.8711 |
+| EUR | MWK | buy | 1969.7936 |
+| EUR | MWK | middle | 1989.2826 |
+| EUR | MWK | sell | 2008.7717 |
+| GBP | MWK | buy | 2354.4498 |
+| GBP | MWK | middle | 2377.7446 |
+| GBP | MWK | sell | 2401.0395 |
+| HKD | MWK | buy | 218.8462 |
+| HKD | MWK | middle | 221.0115 |
+| HKD | MWK | sell | 223.1767 |
+| IDR | MWK | buy | 0.0947 |
+| IDR | MWK | middle | 0.0956 |
+| IDR | MWK | sell | 0.0965 |
+| IEP | MWK | buy | 1213.959 |
+| IEP | MWK | middle | 1225.9699 |
+| IEP | MWK | sell | 1237.9808 |
+| INR | MWK | buy | 18.0057 |
+| INR | MWK | middle | 18.1838 |
+| INR | MWK | sell | 18.362 |
+| JPY | MWK | buy | 10.8783 |
+| JPY | MWK | middle | 10.9859 |
+| JPY | MWK | sell | 11.0935 |
 | KES | MWK | buy | 13.2282 |
 | KES | MWK | middle | 13.3591 |
 | KES | MWK | sell | 13.49 |
-| KRW | MWK | buy | 1.2847 |
-| KRW | MWK | middle | 1.2974 |
-| KRW | MWK | sell | 1.3101 |
-| KWD | MWK | buy | 5569.3274 |
-| KWD | MWK | middle | 5624.4301 |
-| KWD | MWK | sell | 5679.5329 |
+| KRW | MWK | buy | 1.2853 |
+| KRW | MWK | middle | 1.298 |
+| KRW | MWK | sell | 1.3107 |
+| KWD | MWK | buy | 5571.1345 |
+| KWD | MWK | middle | 5626.2551 |
+| KWD | MWK | sell | 5681.3757 |
 
 </details>
 
@@ -277,6 +277,7 @@ The Reserve Bank of Malawi publishes daily buying, middle and selling rates for 
 
 - Publisher's own page: [Major rates](https://www.rbm.mw/Statistics/MajorRates/) · [www.rbm.mw](https://www.rbm.mw)
 - Publication: every business day; the exact schedule, freshness status and any current delay are on the [Reserve Bank of Malawi rates page](https://allratestoday.com/central-bank-rates-api/rbm/)
+- In the API: usually by **08:20 UTC** (measured over the last 10 publications). Schedule a sync at or after that time and retry hourly until `rate_date` moves; every response carries the same figure as `available_by_utc` — see [when to poll](https://allratestoday.com/docs/#when-to-poll)
 - Values are stored unmodified, with the publisher's own `rate_date` on every row — see the [methodology](https://allratestoday.com/official-rates-methodology/)
 
 ## 🧭 Reading the numbers
