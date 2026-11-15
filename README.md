@@ -31,7 +31,75 @@ Get a free API key at [allratestoday.com/register](https://allratestoday.com/reg
 The image is rendered live from the keyless endpoint, so it follows the central bank's publications on npm and on GitHub alike without a new release. The same table as text is folded below for search and copy-paste: on GitHub [a daily Action](.github/workflows/daily-table.yml) refreshes it whenever the central bank publishes a new table; on npm it is as of the package's publish date.
 
 <!-- daily-table:start -->
-_The table is filled in by the daily workflow._
+<details>
+<summary>Table as text: published 2026-11-13 by Reserve Bank of Malawi — 114 rates, first 60 shown. Updated 2026-11-15.</summary>
+
+| Base | Quote | Type | Rate |
+| --- | --- | --- | ---: |
+| AED | MWK | buy | 467.5481 |
+| AED | MWK | middle | 472.174 |
+| AED | MWK | sell | 476.7999 |
+| ARS | MWK | buy | 1.1113 |
+| ARS | MWK | middle | 1.1223 |
+| ARS | MWK | sell | 1.1333 |
+| AUD | MWK | buy | 1167.7255 |
+| AUD | MWK | middle | 1179.279 |
+| AUD | MWK | sell | 1190.8324 |
+| BWP | MWK | buy | 130.4937 |
+| BWP | MWK | middle | 131.7848 |
+| BWP | MWK | sell | 133.0759 |
+| CAD | MWK | buy | 1204.5907 |
+| CAD | MWK | middle | 1216.5089 |
+| CAD | MWK | sell | 1228.4271 |
+| CHF | MWK | buy | 2118.5126 |
+| CHF | MWK | middle | 2139.4731 |
+| CHF | MWK | sell | 2160.4336 |
+| CMD | MWK | buy | 1717.0236 |
+| CMD | MWK | middle | 1734.0118 |
+| CMD | MWK | sell | 1751 |
+| CNY | MWK | buy | 257.4133 |
+| CNY | MWK | middle | 259.9601 |
+| CNY | MWK | sell | 262.5069 |
+| DKK | MWK | buy | 254.2609 |
+| DKK | MWK | middle | 256.7765 |
+| DKK | MWK | sell | 259.2922 |
+| ETB | MWK | buy | 10.6206 |
+| ETB | MWK | middle | 10.7257 |
+| ETB | MWK | sell | 10.8307 |
+| EUR | MWK | buy | 1957.5907 |
+| EUR | MWK | middle | 1976.959 |
+| EUR | MWK | sell | 1996.3273 |
+| GBP | MWK | buy | 2340.8321 |
+| GBP | MWK | middle | 2363.9922 |
+| GBP | MWK | sell | 2387.1523 |
+| HKD | MWK | buy | 218.8853 |
+| HKD | MWK | middle | 221.0509 |
+| HKD | MWK | sell | 223.2166 |
+| IDR | MWK | buy | 0.0944 |
+| IDR | MWK | middle | 0.0953 |
+| IDR | MWK | sell | 0.0962 |
+| IEP | MWK | buy | 1221.6461 |
+| IEP | MWK | middle | 1233.7331 |
+| IEP | MWK | sell | 1245.82 |
+| INR | MWK | buy | 18.2294 |
+| INR | MWK | middle | 18.4097 |
+| INR | MWK | sell | 18.5901 |
+| JPY | MWK | buy | 10.7442 |
+| JPY | MWK | middle | 10.8505 |
+| JPY | MWK | sell | 10.9568 |
+| KES | MWK | buy | 13.218 |
+| KES | MWK | middle | 13.3488 |
+| KES | MWK | sell | 13.4796 |
+| KRW | MWK | buy | 1.2857 |
+| KRW | MWK | middle | 1.2984 |
+| KRW | MWK | sell | 1.3111 |
+| KWD | MWK | buy | 5564.8149 |
+| KWD | MWK | middle | 5619.873 |
+| KWD | MWK | sell | 5674.9311 |
+
+</details>
+
+[Full table on the Reserve Bank of Malawi rates page](https://allratestoday.com/central-bank-rates-api/rbm/) · Source: [Official rates published by RBM, served by AllRatesToday](https://allratestoday.com/central-bank-rates-api/rbm/). Rates are as printed by the central bank; AllRatesToday is not affiliated with it.
 <!-- daily-table:end -->
 
 ## 📦 Installation
